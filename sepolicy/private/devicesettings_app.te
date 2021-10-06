@@ -30,3 +30,7 @@ allow devicesettings_app {
   sysfs_thermal
   sysfs_htsr
 }:{ file lnk_file } rw_file_perms;
+
+# Allow LCD settings to read / write values
+allow devicesettings_app persist_lcd_prop:file { read };
+allow devicesettings_app property_socket:sock_file { write };
