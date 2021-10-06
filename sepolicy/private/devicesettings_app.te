@@ -32,5 +32,6 @@ allow devicesettings_app {
 }:{ file lnk_file } rw_file_perms;
 
 # Allow LCD settings to read / write values
-allow devicesettings_app persist_lcd_prop:file { read };
+allow devicesettings_app persist_lcd_prop:file { read open };
 allow devicesettings_app property_socket:sock_file { write };
+allow devicesettings_app init:unix_stream_socket { connectto };
