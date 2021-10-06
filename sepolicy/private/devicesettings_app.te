@@ -35,3 +35,4 @@ allow devicesettings_app {
 allow devicesettings_app persist_lcd_prop:file { read open };
 allow devicesettings_app property_socket:sock_file { write };
 allow devicesettings_app init:unix_stream_socket { connectto };
+allow devicesettings_app persist_lcd_prop:property_service { set };
